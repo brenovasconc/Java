@@ -1,0 +1,36 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package LIP1.Lista02;
+
+/**
+ *
+ * @author Breno Vasconcelos
+ */
+import java.util.Scanner;
+public class Questao05 {
+
+public static void dim(int linha,int coluna){
+int [][]matriz = new int[linha][coluna];
+Scanner input = new Scanner(System.in);   
+for(int i = 0;i<linha;i++){
+    for(int j=0;j<coluna;j++){
+        System.out.printf("Digite o valor que está na linha %d e coluna %d\n", i+1,j+1);
+            matriz[i][j] = input.nextInt();}
+}
+if(linha == coluna){
+System.out.printf("É UMA MATRIZ QUADRADA");
+}
+}
+
+public static void main(String[] args){
+Scanner input = new Scanner(System.in);
+int linha,coluna;
+System.out.printf("Digite o Valor das linhas:\n");
+    linha = input.nextInt();
+System.out.printf("Digite o valor das Colunas\n");
+    coluna = input.nextInt();
+dim(linha,coluna);
+}
+}
