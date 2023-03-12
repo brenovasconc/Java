@@ -1,0 +1,43 @@
+package LIP1.Lista01;
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author gean_
+ */
+import java.util.Scanner;
+public class Questao08 {
+public static void main(String[] args){
+Scanner input = new Scanner(System.in);
+int dinheiro,x,y;
+System.out.printf("Digite o valor a ser sacado:\n");
+    dinheiro = input.nextInt();
+x = (int)dinheiro / 200;
+System.out.printf("NOTAS DE NOTAS DE 200 REAIS: %d\n", x);
+y = dinheiro - (200 * x);
+x = (int)y / 100; 
+System.out.printf("NOTAS DE NOTAS DE 100 REAIS: %d\n", x);
+y = y - (100 * x);
+x = (int)y / 50;
+System.out.printf("NUMERO DE NOTAS DE 50 REAIS: %d\n", x);
+y = y - (50 * x);
+x = (int)y / 20;
+System.out.printf("NUMERO DE NOTAS DE 20 REAIS: %d\n", x);
+y = y - (20 * x);
+x = (int)y / 10;
+System.out.printf("NUMERO DE NOTAS DE 10 REAIS: %d\n", x);
+y = y - (10 * x);
+x = (int)y / 5;
+System.out.printf("NUMERO DE NOTAS DE 5 REAIS: %d\n", x);
+y = y - (5 * x);
+x = (int)y / 2;
+System.out.printf("NUMERO DE NOTAS DE 2 REAIS: %d\n", x);
+y = y -(2 * x);
+System.out.printf("NUMERO DE NOTAS DE 1 REAL: %d\n", y);
+}
+
+}
