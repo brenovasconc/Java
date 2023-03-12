@@ -1,0 +1,48 @@
+package LIP1.InterfaceGrafica;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+//herança (JFrame)
+public class Formularios extends JFrame{
+    JLabel hello, resultado;
+    JButton botao_ok;
+    
+//construtor
+    public Formularios () {
+        super("Meu primeiro formulario");
+        hello = new JLabel("Hello world from Form :3");
+        botao_ok = new JButton("Clique aqui!");
+        resultado = new JLabel();
+        
+        //container (pode dentro do construtor)
+        Container cont = getContentPane();
+        cont.add(hello);
+        cont.add(botao_ok);
+        cont.add(resultado);
+        setLayout(null);
+        //colocando posição(eixo X, eixo Y, Largura, Altura)
+        hello.setBounds(20,20,200,30);
+        botao_ok.setBounds(100,60,120,30);
+        resultado.setBounds(20, 100, 200, 30);
+        
+        Evento meu_evento = new Evento();
+        botao_ok.addActionListener(meu_evento);
+        
+        //posição inicial da janela
+        setSize(300,400);
+        setVisible(true);
+    }
+    //
+    private class Evento implements ActionListener{
+    @Override
+    public void actionPerformed(ActionEvent e){
+    resultado.setText("Botão clicado!");
+     }
+    }
+    
+    public static void main(String[] args){
+       Formularios form = new Formularios();
+       form.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+}
