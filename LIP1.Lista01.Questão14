@@ -1,0 +1,23 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package LIP1.Lista01;
+
+/**
+ *
+ * @author gean_
+ */
+import java.util.Scanner;
+public class Questao14 {
+public static void main(String[] args){
+Scanner input = new Scanner (System.in);
+int i,fat=1;
+System.out.printf("Digite o numero fatorial que deseja:\n");
+    int x = input.nextInt();
+for(i=1;i<=x;i++){
+fat = fat * i;
+}
+System.out.printf("O valor eh:%d", fat);
+}
+}
