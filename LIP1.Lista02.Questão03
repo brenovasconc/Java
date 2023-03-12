@@ -1,0 +1,63 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package LIP1.Lista02;
+
+/**
+ *
+ * @author gean_
+ */
+import java.util.Scanner;
+public class Questao03 {
+
+public static double SOMA(double x1,double x2){
+return x1 + x2;    
+}
+
+public static double SUB(double x1,double x2){
+    return x1 - x2;
+}
+
+public static double MULT(double x1,double x2){
+    return x1 * x2;
+}
+
+public static double DIV(double x1, double x2){
+    return x1 / x2;
+}
+
+public static void main(String[] args){
+Scanner input = new Scanner(System.in);
+System.out.printf("#################################\n");
+System.out.printf("\tCALCULADORA\n");
+System.out.printf("#################################\n");
+float x1,x2;
+int menu;
+System.out.printf("Digite a operação que deseja executar:\n1 PARA ADIÇÃO\n2PARA SUBTRAÇÃO\n3 PARA MULTIPLICAÇÃO\n4 PARA DIVISAO\n5 PARA SAIR\n");
+    menu = input.nextInt();
+System.out.printf("Digite o primeiro numero\n");
+    x1 = input.nextFloat();
+System.out.printf("Digite o segundo numero\n");
+    x2 = input.nextFloat();
+switch(menu){
+    case 1:
+        System.out.printf("O Resultado eh:%.2f",SOMA(x1,x2));
+    break;
+    case 2:
+        System.out.printf("O Resultado eh:%.2f", SUB(x1,x2));
+    break;
+    case 3:
+        System.out.printf("O Resultado eh:%.2f", MULT(x1,x2));
+    break;
+    case 4:
+        System.out.printf("O Resultado eh:%.2f", DIV(x1,x2));
+    break;
+    case 5:
+        System.out.printf("SAIU DO PROGRAMA");
+    break;
+    default:
+        System.out.printf("COMANDO INVALIDO");
+}
+}
+}
