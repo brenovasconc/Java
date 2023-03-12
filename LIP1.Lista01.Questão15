@@ -1,0 +1,54 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package LIP1.Lista01;
+
+/**
+ *
+ * @author gean_
+ */
+import java.util.Scanner;
+public class Questao15 {
+public static void main(String[] args){
+Scanner input = new Scanner (System.in);
+
+System.out.printf("################################\n");
+System.out.printf("\tCALCULADORA\n");
+System.out.printf("################################\n");
+
+System.out.printf("Digite o valor do primeiro numero:\n");
+    int x1 = input.nextInt();
+System.out.printf("Digite o valor do segundo numero:\n");
+    int x2 = input.nextInt();
+    
+System.out.printf("DIGITE 1 PARA SOMA\n");
+System.out.printf("DIGITE 2 PARA SUBTRAÇÃO\n");
+System.out.printf("DIGITE 3 PARA MULTIPLICAÇÃO\n");
+System.out.printf("DIGITE 4 PARA DIVISAO\n");
+System.out.printf("DIGITE 5 PARA SAIR\n");
+    int Menu = input.nextInt();
+int x = 0;
+switch(Menu){
+    case 1: 
+        System.out.printf("O Resultado é: %d",x1 + x2);
+        break;
+    case 2:
+        System.out.printf("O Resultado é: %d ", x1 - x2);
+        break;
+    case 3:  
+        System.out.printf("O Resultado é: %d", x1 * x2);
+        break;
+    case 4:
+        System.out.printf("O Resultado é: %d", x1 / x2);
+        break;
+    case 5: 
+        System.out.printf("Saiu do programa");
+        break;
+    default:
+        System.out.printf("OPÇÃO DIGITADA INVALIDA");
+    
+}
+
+}
+}
