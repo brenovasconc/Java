@@ -1,0 +1,57 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package LIP1.InterfaceGrafica.Layouts;
+
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.GridLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+/**
+ *
+ * @author Breno Vasconcelos
+ */
+public class GridLayoutEx extends JFrame {
+    
+    JButton bNorth,bSouth,bEast,bWest,bCenter,bAfter,bBefore,bAfter2,bBefore2;
+    
+    public GridLayoutEx() {
+        super("grid layout");
+
+        bNorth = new JButton("Button North");
+        bSouth = new JButton("Button South");
+        bEast = new JButton("Button East");
+        bWest = new JButton("Button West");
+        bCenter = new JButton ("Button Center");
+        bAfter = new JButton("Button After");
+        bBefore = new JButton("Button Before");
+        bAfter2 = new JButton("Button After2");
+        bBefore2 = new JButton("Button Before2");
+        
+        Container cont = getContentPane();
+        //linhas / colunas
+        setLayout(new GridLayout(3,3));
+        
+        cont.add(bNorth);
+        cont.add(bSouth);
+        cont.add(bEast);
+        cont.add(bWest);
+        cont.add(bCenter);
+        cont.add(bAfter);
+        cont.add(bBefore);
+        cont.add(bAfter2);
+        cont.add(bBefore2);
+        
+        
+        setSize(400, 400);
+        setVisible(true);
+    }
+    
+    public static void main(String[] args) {
+        GridLayoutEx gridExample = new GridLayoutEx();
+        gridExample.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+}
