@@ -1,0 +1,27 @@
+package LIP1.Lista01;
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author gean_
+ */
+import java.util.Scanner;
+public class Questao09 {
+public static void main(String[] args){
+Scanner input = new Scanner(System.in);
+float salario,parcela;
+System.out.printf("Digite o Valor do Salario recebido:\n");
+    salario = input.nextFloat();
+System.out.printf("Digite o valor da parcela do empresimo:\n");
+    parcela = input.nextFloat();
+input.close();
+if ( parcela > (0.2*salario) )
+    System.out.printf("NAO CONCEDIDO");
+else
+    System.out.printf("CONCEDIDO");
+}
+}
