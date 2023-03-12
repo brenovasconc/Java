@@ -1,0 +1,55 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package LIP1.NP2;
+
+import java.awt.Container;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+/**
+ *
+ * @author Breno Vasconcelos
+ */
+public class Questão07 {
+
+    public static void main(String[] args) {
+        JFrame Questão07 = new JFrame("Questão 07:");
+        JLabel LABEL = new JLabel("Escreva algo!");
+        JTextField TEXTFIELD = new JTextField();
+        JButton BUTTON = new JButton("Clique Aqui");
+        JLabel RESP = new JLabel("");
+
+        Container CONT = Questão07.getContentPane();
+        CONT.add(LABEL);
+        CONT.add(TEXTFIELD);
+        CONT.add(BUTTON);
+        CONT.add(RESP);
+
+
+        LABEL.setBounds(20, 20, 300, 30);
+        TEXTFIELD.setBounds(20, 60, 300, 30);
+        BUTTON.setBounds(100, 120, 100, 30);
+        RESP.setBounds(20, 170, 300, 30);
+
+        BUTTON.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String name = TEXTFIELD.getText();
+                RESP.setText(name);
+                TEXTFIELD.setText("");
+            }
+        });
+
+        Questão07.setLayout(null);
+        Questão07.setVisible(true);
+        Questão07.setSize(400, 400);
+        Questão07.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+    }
+}
