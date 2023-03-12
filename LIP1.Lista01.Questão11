@@ -1,0 +1,36 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package LIP1.Lista01;
+
+/**
+ *
+ * @author gean_
+ */
+import java.util.Scanner;
+public class Questao11 {
+public static void main(String[] args){
+Scanner input = new Scanner(System.in);
+float av1,av2,media,fin;
+System.out.printf("Digite a nota da AV1:\n");
+    av1 = input.nextFloat();
+System.out.printf("Digite a nota da AV2:\n");
+    av2 = input.nextFloat();
+media = (av1+av2)/2;
+if(media < 4)
+    System.out.printf("REPROVADO com média %.2f",media);
+else if(media >= 7)
+    System.out.printf("APROVADO com média %.2f", media);
+else{
+    System.out.printf("ALUNO FOI PARA A FINAL\n");
+    System.out.printf("Insira a nota da prova final:\n");
+        fin = input.nextFloat();
+            if(fin >= 7)
+                System.out.printf("APROVADO COM NOTA FINAL %.2f", fin);
+            else 
+                System.out.printf("REPROVADO COM MEDIA FINAL %.2f", fin);
+}
+    
+}
+}
