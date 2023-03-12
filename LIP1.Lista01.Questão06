@@ -1,0 +1,31 @@
+package LIP1.Lista01;
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author gean_
+ */
+import java.util.Scanner;
+public class Questao06 {
+public static void main(String [] args){
+Scanner input = new Scanner(System.in);
+int x;
+System.out.printf("Digite um numero inteiro:\n");
+    x = input.nextInt();
+input.close();
+if(x > 0 ){
+ int quadrado;
+ double raiz;
+ quadrado = x * x;
+ raiz = Math.sqrt(x);
+ System.out.printf("O Quadrado do numero eh: %d\n", quadrado);
+ System.out.printf("A raiz quadrada do numero eh: %.2f", raiz);
+}
+else
+    System.out.printf("Nao é um numero positivo");
+}
+}
