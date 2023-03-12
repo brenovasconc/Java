@@ -1,0 +1,22 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package LIP1.Lista01;
+
+/**
+ *
+ * @author gean_
+ */
+public class Questao12 {
+public static void main(String[] args){
+int i,QuadradoSoma=0,SomaQuadrado=0;
+for(i=1;i<=10;i++){
+QuadradoSoma = QuadradoSoma + i;
+SomaQuadrado = SomaQuadrado + (i*i);
+}
+QuadradoSoma = QuadradoSoma * QuadradoSoma;
+System.out.printf("A Soma dos Quadrados eh:%d\n",SomaQuadrado);
+System.out.printf("O Quadrado da soma eh:%d\n",QuadradoSoma);
+}
+}
