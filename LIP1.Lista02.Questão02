@@ -1,0 +1,40 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package LIP1.Lista02;
+
+/**
+ *
+ * @author gean_
+ */
+import java.util.Scanner;
+public class Questao02 {
+
+public static void Fibonacci(int termos){
+int i,a=0,b=1,aux;
+for(i=2;i<termos;i++){
+aux = a + b;
+a = b;
+b = aux;
+System.out.printf("%d\n", aux);
+}
+}
+
+public static void main(String[] args){
+Scanner input = new Scanner(System.in);
+int termos;
+
+System.out.printf("Digite o valor de termos da Fibonacci:\n");
+    termos = input.nextInt();
+    
+if(termos == 1)
+    System.out.printf("0\n");
+else if(termos == 2)
+    System.out.printf("0\n1\n");
+else
+   System.out.printf("0\n1\n");
+   Fibonacci(termos);
+}
+}
+
