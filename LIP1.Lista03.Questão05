@@ -1,0 +1,30 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package LIP1.NP2;
+
+/**
+ *
+ * @author Breno Vasconcelos
+ */
+import java.util.Scanner;
+public class Questão05 {
+public static void main(String[] args){
+Scanner input = new Scanner(System.in);
+int n,i,QuadradoSoma=0,SomaQuadrado=0;
+System.out.printf("Digite a Quatidade de termos:\n");
+n = input.nextInt();
+
+for(i=1;i<=n;i++){
+QuadradoSoma = QuadradoSoma + i;
+SomaQuadrado = SomaQuadrado + (i*i);
+}
+QuadradoSoma = QuadradoSoma * QuadradoSoma;
+System.out.printf("A Soma dos Quadrados eh:%d\n",SomaQuadrado);
+System.out.printf("O Quadrado da soma eh:%d\n",QuadradoSoma);
+double result = QuadradoSoma - SomaQuadrado;
+System.out.printf("A Diferença entre o Quadrado da Soma e a Soma dos Quadrados é: %.2f", result);
+}
+}    
+
