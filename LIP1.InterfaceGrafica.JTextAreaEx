@@ -1,0 +1,68 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package LIP1.InterfaceGrafica;
+
+/**
+ *
+ * @author Breno Vasconcelos
+ */
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JTextArea;
+import javax.swing.border.Border;
+
+
+public class JTextAreaEx extends JFrame {
+    JTextArea tInput, tOutput;
+    JButton okButton;
+    public JTextAreaEx() {
+        super("JTextArea");
+        tInput = new JTextArea("Escreva Algo...");
+        tOutput = new JTextArea();
+        okButton = new JButton("Ok");
+        
+        Border preta = BorderFactory.createLineBorder(Color.BLACK);
+        Border vermelha = BorderFactory.createLineBorder(Color.RED);
+        Container cont = getContentPane();
+        setLayout(null);
+        
+        cont.add(tInput);
+        cont.add(tOutput);
+        cont.add(okButton);
+        
+        tInput.setBounds(20, 20, 350, 100);
+        okButton.setBounds(175, 120, 50, 30);
+        tOutput.setBounds(20, 150, 350, 100);
+        tInput.setBorder(preta);
+        tOutput.setBorder(vermelha);
+        
+        RepeatText repeat = new RepeatText();
+        okButton.addActionListener(repeat);
+        
+        setSize(400,400);
+        setVisible(true);   
+    }
+    
+    public class RepeatText implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            String textInput = tInput.getText();
+            tOutput.setText(textInput);
+            tInput.setText("");
+        }
+        
+    }
+    
+    public static void main(String[] args) {
+        JTextAreaEx jtextarea = new JTextAreaEx();
+        jtextarea.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);}
+    
+}
