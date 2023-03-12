@@ -1,0 +1,51 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package LIP1.InterfaceGrafica.Layouts;
+
+import java.awt.BorderLayout;
+import java.awt.Container;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+/**
+ *
+ * @author Breno Vasconcelos
+ */
+public class BoxLayoutEx extends JFrame {
+    
+    JButton bNorth, bSouth, bEast, bWest, bCenter;
+    
+    public BoxLayoutEx() {
+        super("Box Example");
+        Container cont = getContentPane();
+        //Box.createVerticalBox ou Box.createHorizontalBox
+        Box horizon = Box.createHorizontalBox();
+        
+        bNorth = new JButton("Button North");
+        bSouth = new JButton("Button South");
+        bEast = new JButton("Button East");
+        bWest = new JButton("Button West");
+        bCenter = new JButton("Button Center");
+        
+        horizon.add(bCenter);
+        horizon.add(bEast);
+        horizon.add(bNorth);
+        horizon.add(bSouth);
+        horizon.add(bWest);
+        
+        cont.add(horizon, BorderLayout.CENTER);
+        setLayout(new BoxLayout(cont, BoxLayout.PAGE_AXIS));
+        
+        setSize(400,400);
+        setVisible(true);
+    }
+    
+    public static void main(String[] args) {
+        BoxLayoutEx boxExample = new BoxLayoutEx();
+        boxExample.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+}
