@@ -1,0 +1,31 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package LIP1.Lista02;
+
+/**
+ *
+ * @author Breno Vasconcelos
+ */
+import java.util.Scanner;
+import java.util.InputMismatchException;
+public class Questão03 {
+
+public static void main(String[] args){
+int senha = 1234;
+int pass;
+Scanner input = new Scanner(System.in);
+System.out.printf("Digite a sua senha:");
+    pass = input.nextInt();
+try{
+if(pass == senha)
+System.out.printf("VOCE ENTROU NO PROGRAMA");
+else
+System.out.printf("Senha incorreta");}
+catch(InputMismatchException x){
+System.out.printf("Senha invalida");
+System.err.printf(x.getMessage());
+}
+}
+}
