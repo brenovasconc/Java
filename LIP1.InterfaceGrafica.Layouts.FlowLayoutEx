@@ -1,0 +1,55 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package LIP1.InterfaceGrafica.Layouts;
+
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.FlowLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+/**
+ *
+ * @author Breno Vasconcelos
+ */
+public class FlowLayoutEx extends JFrame {
+    
+        JButton bNorth, bSouth, bEast, bWest, bCenter;
+        JLabel label1;
+        JTextField text1;
+    
+    public FlowLayoutEx() {
+        super("flow layout");
+        //(nome que quiser por no textfield) / (numero de tabs que voce deseja)
+        text1 = new JTextField("Insira o Nome",10);
+        label1 = new JLabel("Nome");
+        bNorth = new JButton("Button North");
+        bSouth = new JButton("Button South");
+        bEast = new JButton("Button East");
+        bWest = new JButton("Button West");
+        bCenter = new JButton("Button Center");
+        
+        Container cont = getContentPane();
+        setLayout(new FlowLayout());
+        
+        cont.add(label1);
+        cont.add(text1);
+        cont.add(bNorth);
+        cont.add(bSouth);
+        cont.add(bEast);
+        cont.add(bWest);
+        cont.add(bCenter);
+        
+        setSize(400, 400);
+        setVisible(true);
+    }
+    
+    public static void main(String[] args) {
+        FlowLayoutEx flowExample = new FlowLayoutEx();
+        flowExample.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+}
