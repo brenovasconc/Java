@@ -1,0 +1,23 @@
+package LIP1.Lista01;
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author Breno Vasconcelos
+ */
+import java.util.Scanner;
+public class Questao05 {
+public static void main (String []args){
+Scanner input = new Scanner(System.in);
+double area,raio,pi;
+pi = 3.14;
+System.out.printf("Digite o valor do raio:\n");
+    raio = input.nextDouble();
+area = pi * (raio*raio);
+System.out.printf("O valor da area é: %f", area);
+}
+}
