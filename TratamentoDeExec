@@ -1,0 +1,23 @@
+package LIP1.Lista02;
+
+import java.util.Scanner;
+public class TratamentoDeExec {
+ 
+ public static void main(String[] args) {
+ Scanner in = new Scanner(System.in);
+ int numberA, numberB, resp;
+ System.out.printf("A: ");
+ numberA = in.nextInt();
+ System.out.printf("B: ");
+ numberB = in.nextInt();
+ try {
+ resp = numberA / numberB;
+ System.out.printf("Result:%d",resp);
+ } catch (ArithmeticException e) {
+ System.err.printf(e.getMessage());
+ } finally {
+ in.close();
+ System.out.println("The code is still running!");
+ }
+ }
+}
