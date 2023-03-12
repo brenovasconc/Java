@@ -1,0 +1,100 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package LIP1.Lista03;
+
+/**
+ *
+ * @author Breno Vasconcelos
+ */
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
+public class Questao04 {
+public static void main(String[] args){
+    
+    JFrame titulo = new JFrame("Calculadora");  
+    JLabel num1 = new JLabel("Insira aqui o primeiro número:");
+    JTextField numero1 = new JTextField();
+    JLabel num2 = new JLabel("Insira aqui o segundo número:");
+    JTextField numero2 = new JTextField();
+    JButton SOMA = new JButton("SOMA");
+    JButton SUB = new JButton("SUBTRAÇÃO");
+    JButton MULT = new JButton("MULTIPLICAÇÃO");
+    JButton DIV = new JButton("DIVISÃO");
+    JLabel result = new JLabel();
+    
+    Container CONT = titulo.getContentPane();
+        CONT.add(num1);
+        CONT.add(numero1);
+        CONT.add(num2);
+        CONT.add(numero2);
+        CONT.add(SOMA);
+        CONT.add(SUB);
+        CONT.add(MULT);
+        CONT.add(DIV);
+        CONT.add(result);
+        
+    num1.setBounds(20,20,200,20);
+    numero1.setBounds(200, 20, 40, 20);
+    num2.setBounds(20, 40, 200, 20);
+    numero2.setBounds(200, 40, 40, 20);
+    SOMA.setBounds(20, 60, 130, 40);
+    SUB.setBounds(150, 60, 130, 40);
+    MULT.setBounds(270, 60, 130, 40);
+    DIV.setBounds( 390,60, 130, 40);
+    result.setBounds(160, 100, 100, 40);
+    
+    
+        SOMA.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                double num1 =Double.parseDouble(numero1.getText());
+                double num2 = Double.parseDouble(numero2.getText());
+                double resultado = num1 + num2;
+                result.setText("Resultado: " + resultado);
+                numero1.setText("");
+                numero2.setText("");
+            }
+        });
+        SUB.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                double num1 =Double.parseDouble(numero1.getText());
+                double num2 = Double.parseDouble(numero2.getText());
+                double resultado = num1 - num2;
+                result.setText("Resultado: " + resultado);
+                numero1.setText("");
+                numero2.setText("");
+            }
+        });
+        MULT.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                double num1 =Double.parseDouble(numero1.getText());
+                double num2 = Double.parseDouble(numero2.getText());
+                double resultado = num1 * num2;
+                result.setText("Resultado: " + resultado);
+                numero1.setText("");
+                numero2.setText("");
+            }
+        });
+        DIV.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                double num1 =Double.parseDouble(numero1.getText());
+                double num2 = Double.parseDouble(numero2.getText());
+                double resultado = num1 / num2;
+                result.setText("Resultado: " + resultado);
+                numero1.setText("");
+                numero2.setText("");
+            }
+        });
+    titulo.setLayout(null);
+    titulo.setVisible(true);
+    titulo.setSize(800, 800);
+    titulo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   
+}
+}
