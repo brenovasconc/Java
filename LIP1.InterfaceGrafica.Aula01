@@ -1,0 +1,75 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package LIP1.InterfaceGrafica;
+
+import java.awt.Container;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import java.awt.event.*;
+import javax.swing.JOptionPane;
+import java.util.List;
+import java.util.Set;
+/**
+ *
+ * @author maumneto
+ */
+public class Aula01 {
+
+    public static void main(String[] args) {
+        // CRIAR OS ELEMENTOS
+        JFrame SCREEN = new JFrame("Second Example JTextField");
+        JLabel LABELNAME = new JLabel("Name");
+        JLabel LABELLASTNAME = new JLabel("Last Name");
+        JTextField TEXTFIELDNAME = new JTextField();
+        JTextField TEXTFIELDLASTNAME = new JTextField();
+        JButton BUTTONSHOWNAME = new JButton("Show");
+        JLabel RESULTLABEL = new JLabel("");
+        
+
+        // armazena os elementos na variavel, simplificando o codigo
+        Container CONT = SCREEN.getContentPane();
+
+        // ADICIONAR OS ELEMENTOS NO FRAME
+        CONT.add(LABELNAME);
+        CONT.add(LABELLASTNAME);
+        CONT.add(TEXTFIELDNAME);
+        CONT.add(TEXTFIELDLASTNAME);
+        CONT.add(BUTTONSHOWNAME);
+        CONT.add(RESULTLABEL);
+        
+
+        // disable of auto-layout
+        SCREEN.setLayout(null);
+
+        // AJUSTAR AS POSIÇOES DOS ELEMENTOS
+        LABELNAME.setBounds(20, 20, 300, 30);
+        TEXTFIELDNAME.setBounds(20, 50, 300, 30);
+        LABELLASTNAME.setBounds(20, 80, 300, 30);
+        TEXTFIELDLASTNAME.setBounds(20, 110, 300, 30);
+        BUTTONSHOWNAME.setBounds(20, 140, 100, 30);
+        RESULTLABEL.setBounds(20, 170, 300, 30);
+
+        // CRIAR AS AÇÕES DOS BOTOES
+        BUTTONSHOWNAME.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String name = TEXTFIELDNAME.getText();
+                String lastName = TEXTFIELDLASTNAME.getText();
+                String hello = "Hello Mr(s) " + name + " " + lastName;
+                RESULTLABEL.setText(hello);
+                TEXTFIELDNAME.setText("");
+                TEXTFIELDLASTNAME.setText("");
+            }
+        });
+
+        // CONFIGURAÇÃO DO FRAME ( visibilidade, tamanho e opção de fehcar)
+        SCREEN.setVisible(true);
+        SCREEN.setSize(400, 400);
+        SCREEN.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+    }
+}
