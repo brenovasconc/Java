@@ -1,0 +1,41 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package LIP1.Lista01;
+
+/**
+ *
+ * @author gean_
+ */
+import java.util.Scanner;
+public class Questao10 {
+public static void main (String[] args){
+Scanner input = new Scanner (System.in);
+int a,b,c;
+System.out.printf("Digite o valor de a:\n" );
+    a = input.nextInt();
+System.out.printf("Digite o valor de b:\n");
+    b = input.nextInt();
+System.out.printf("Digite o valor de c:\n") ;
+    c = input.nextInt();
+    
+int delta;
+delta = (b * b) - (4 * a * c) ;
+
+if(a == 0)
+    System.out.printf("Não é uma equaçaõ do segundo grau (a=0)");
+else if(delta < 0)
+    System.out.printf("Não existe raiz real(Delta menor que zero)");
+else if(delta == 0){
+    float x0 = -b / 2 *a;
+    System.out.printf("Delta = zero, raiz unica: %d", x0);}
+else {
+ double x1,x2;
+ x1 = (-b + Math.sqrt(delta))/ (2 * a);
+ x2 = (-b - Math.sqrt(delta))/(2 * a);
+ System.out.printf("As duas raizes da equação são:\n x1 = %.2f\n x2 = %.2f\n", x1,x2);
+}
+  
+}
+}
