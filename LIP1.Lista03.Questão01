@@ -1,0 +1,30 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package LIP1.Lista03;
+
+/**
+ *
+ * @author Breno Vasconcelos
+ */
+import javax.swing.*;
+import java.awt.*;
+public class Questao01 {
+public static void main(String[] args){
+
+JFrame titulo = new JFrame("Bem vindo a primeira GUI");
+JLabel mensagem = new JLabel("Olá Mundo!");
+
+Container CONT = titulo.getContentPane();
+    CONT.add(mensagem);
+
+mensagem.setBounds(20,20,300,30);    
+
+titulo.setLayout(null);
+titulo.setVisible(true);
+titulo.setSize(400, 400);
+titulo.getDefaultCloseOperation();
+
+} 
+}
