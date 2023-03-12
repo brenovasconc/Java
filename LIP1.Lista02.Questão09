@@ -1,0 +1,39 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package LIP1.Lista02;
+
+/**
+ *
+ * @author Breno Vasconcelos
+ */
+public class Questão02 {
+    public static double iterativeDivide(double... args) {
+      double total = 1;
+      try{
+      for (double i : args) {
+        total /= i;
+      }
+      }
+      catch (ArithmeticException x){
+      System.err.printf(x.getMessage());
+      }
+      finally{
+      return total;
+    }}
+    public static String toLowerCase(String phrase) {
+      String newPhrase = null;
+      try{
+      newPhrase = phrase.toLowerCase();}
+      catch (NullPointerException x){
+      System.err.printf(x.getMessage());
+      }
+      finally{
+      return newPhrase;
+    }}
+    public static void main(String[] args) {
+      System.out.println(iterativeDivide(1, 2.1, 3.2, 4.1, 0)); 
+      System.out.println(toLowerCase("OLA A TODOS")); 
+    }
+}    
