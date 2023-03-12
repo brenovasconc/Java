@@ -1,0 +1,59 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package LIP1.Lista02;
+
+/**
+ *
+ * @author gean_
+ */
+import java.util.Scanner;
+public class Questao01 {
+public static double PesoIdeal (double altura,String genero){
+double PesoIdeal = 0;
+switch(genero){
+    case("h"):
+    case("homem"):
+    case("HOMEM"):
+    case("Homem"):
+         PesoIdeal = (72.7*altura) - 58;
+    break;
+    case("m"):
+    case("mulher"):
+    case("MULHER"):
+    case("Mulher"):
+        PesoIdeal = (62.1 * altura) - 44.7;
+    break;
+    default:
+    System.out.printf("GENERO DIGITADO ERRADO");
+    PesoIdeal = -1;
+}
+return PesoIdeal;
+}
+
+public static double IMC (double peso,double altura){
+double IMC;
+IMC = peso / (altura  * altura );
+return IMC;
+}
+
+public static void main(String[] args){
+ Scanner input = new Scanner (System.in);  
+ double Peso,Altura;
+ String Genero;
+ 
+System.out.printf("Digite o seu Peso:\n");
+    Peso = input.nextDouble();
+System.out.printf("Digite sua Altura\n");
+    Altura = input.nextDouble();
+System.out.printf("Digite o seu genero\n");
+    Genero = input.next();
+    
+System.out.printf("O seu IMC eh:%.2f\n", IMC(Peso,Altura));
+System.out.printf("Seu peso ideal eh:%.2f\n", PesoIdeal(Altura,Genero));
+}
+
+}
+
+
