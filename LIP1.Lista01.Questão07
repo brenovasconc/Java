@@ -1,0 +1,34 @@
+package LIP1.Lista01;
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author gean_
+ */
+import java.util.Scanner;
+public class Questao07 {
+public static void main(String[] args){
+Scanner input = new Scanner (System.in);
+float valorHora,qntHora,IR,INSS,SIND,bruto,liq;
+
+System.out.printf("Digite o Valor da sua Hora:\n");
+    valorHora = input.nextFloat();
+System.out.printf("Digite o numero de horas trabalhadas:\n");
+    qntHora = input.nextFloat();
+bruto = valorHora * qntHora;
+IR = bruto - (float)(bruto * 0.11);
+INSS = bruto - (float)(bruto *0.8 );
+SIND = bruto - (float)(bruto * 0.5);
+liq = bruto - IR - INSS - SIND;
+
+System.out.printf("Salario Bruto: R$%.2f\n", bruto);
+System.out.printf("IR: R$%.2f\n", IR);
+System.out.printf("INSS: R$%.2f\n", INSS);
+System.out.printf("Sindicato: R$%.2f\n",SIND);
+System.out.printf("O salario Liquido eh: R$%.2f", liq);
+} 
+}
